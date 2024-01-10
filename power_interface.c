@@ -1,18 +1,22 @@
 #include <stdio.h>
 
-extern void _power (double a, int x); 
+extern float _power (float a, int x); 
 
-void power (double a, int x);
+float power (float a, int x);
 
 int main()
 {
-    double value;
+    float value;
     int power_value;
 
-    scanf("base(liczba) %lf", &value);
-    scanf("exponent(potega) %d", &power_value);
-
+    printf("base(liczba) \n");
+    scanf("%f", &value);
+    scanf("%d", &power_value);
     
+    
+    printf("values are %f and %d \n", value, power_value);
+
+    printf("%8f", power(value, power_value));
 
     return 0;
 }
