@@ -24,7 +24,7 @@ int main()
         }
             
 
-        if(scanf("%f\n", &power_value) == 0 || temp != '\n') {
+        if(scanf("%f%c", &power_value, &temp) == 0 || temp != '\n') {
             printf("Zly format wpisanych liczb\n");
             c = NULL;
             while ((c = getchar()) != '\n' && c != EOF) { } 
