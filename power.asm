@@ -15,16 +15,33 @@ _power:
 	fld1
 	mov ecx, b
  
+	cmp ecx, 0
+	jg my_loop_positive
+	je my_loop_zero
+	neg ecx
 	
-my_loop:
+	jmp my_loop_negative
+	
+my_loop_positive:
 	fmul st1
 
+	loop my_loop_positive
+	
+	jmp ending
 
-	loop my_loop
-	; fstp dword [esp]
-	; ; pop eax
-	; ; mov eax, dword b
+my_loop_negative:
+	fdiv st1
 
+	loop my_loop_negative
+	
+	jmp ending
+
+my_loop_zero:
+	fld
+
+	jmp ending
+
+ending:
 	leave
 	
 	ret

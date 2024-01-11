@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 
-extern float _power (float a, int x); 
+extern float _power (float a, float x); 
 
-float power (float a, int x);
+float power (float a, float x);
 
 int main()
 {
     float value;
-    int power_value;
+    float power_value;
     char temp;
     int c;
 
@@ -24,7 +24,7 @@ int main()
         }
             
 
-        if(scanf("%d%c", &power_value, &temp) == 0 || temp != '\n') {
+        if(scanf("%f\n", &power_value) == 0 || temp != '\n') {
             printf("Zly format wpisanych liczb\n");
             c = NULL;
             while ((c = getchar()) != '\n' && c != EOF) { } 
