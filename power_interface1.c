@@ -42,7 +42,7 @@ int main()
         } 
         break;
     }
-    printf("values are %f and %d \n", value, power_value);
+    printf("values are %f and %f \n", value, power_value);
 
     printf("%8f", power(value, power_value));
 
